@@ -29,22 +29,22 @@
     <div style="background-color: antiquewhite; padding: 30px; width: 260px; border-radius: 15px;">
 <form action="">
     <label for="name">NAME: </label>
-    <input type="text" name="" id="name" /><br><br>
+    <input type="text" name="" id="name"  required/><br><br>
 
     <label for="age">AGE:</label>
-    <input type="number" name="" id="age" /><br><br>
+    <input type="number" name="" id="age" required  /><br><br>
 
     <label for="mobile">MOBILE: </label>
-    <input type="tel" name="" id="mobile"/><br><br>
+    <input type="tel" name="" id="mobile" required /><br><br>
 
     <label for="email">EMAIL</label>
-    <input type="email" name="" id="email"> <br><br>
+    <input type="email" name="" id="email" required> <br><br>
 
     <label for="blood">Blood Grp : </label>
-    <input type="text" name="" id="blood" /><br><br>
+    <input type="text" name="" id="blood" required /><br><br>
 
     <label for="address">ADDRESS: </label>
-    <input type="text" name="" id="address" /><br><br>
+    <input type="text" name="" id="address" required  /><br><br>
 
     <input type="submit">
 </form>
@@ -57,7 +57,7 @@
     <h4 id="pEmail"></h4>
     <h4 id="pBlood"></h4>
     <h4 id="pAddress"></h4>
-    <h4 id="pThank"></h4>
+    <h6 id="pThank"></h6>
 
 
 
@@ -94,7 +94,7 @@ divCon.style.height = "500px";
 divCon.style.width = "300px";
 divCon.style.border = "2px solid lightblue";
 divCon.style.borderRadius = "20px 60px";
-divCon.style.backgroundColor = "lightgreen";
+divCon.style.backgroundColor = "#8AC649";
 document.body.appendChild(divCon);
 
 
@@ -102,7 +102,6 @@ let divCon1 = document.createElement("img");
 divCon1.setAttribute("src", "pic.png");
 divCon1.style.height = "150px";
 divCon1.style.width = "150px";
-// divCon1.style.Se
 divCon1.style.padding = "30px 23%";
 document.body.appendChild(divCon1);
 divCon.appendChild(divCon1);
@@ -112,15 +111,15 @@ let pName = document.getElementById("pName")
 pName.innerHTML =name.value;
 pName.style.marginTop = "-20px"
 pName.style.textAlign = "center"
-pName.style.color = "white"
-pName.style.textShadow = "0px 0px 10px black"
+pName.style.color = "black"
+pName.style.textShadow = "0px 0px 10px white"
 divCon.appendChild(pName)
 
 
 let divCon2 = document.createElement("div")
 divCon2.style.width = "300px"
 divCon2.style.height = "200px"
-divCon2.style.backgroundColor = "#92E2F4"
+divCon2.style.backgroundColor = "#373E45"
 divCon.appendChild(divCon2)
 
 
@@ -128,6 +127,7 @@ divCon.appendChild(divCon2)
 
 let pAge = document.getElementById("pAge")
 pAge.style.paddingTop = "15px"
+pAge.style.color= "white"
 pAge.innerHTML = "Age: " + age.value;
 pAge.style.paddingLeft = "30px"
 
@@ -140,6 +140,7 @@ divCon2.appendChild(pAge)
 
 let pNumber = document.getElementById("pNumber")
 pNumber.innerHTML = "Mobile: "+ mobile.value;
+pNumber.style.color= "white"
 pNumber.style.paddingLeft = "30px"
 divCon2.appendChild(pNumber)
 
@@ -147,6 +148,7 @@ divCon2.appendChild(pNumber)
 
 let pEmail = document.getElementById("pEmail")
 pEmail.innerHTML = "Email: "+ email.value;
+pEmail.style.color= "white"
 pEmail.style.paddingLeft = "30px"
 divCon2.appendChild(pEmail)
 
@@ -154,18 +156,21 @@ divCon2.appendChild(pEmail)
 
 let pBlood = document.getElementById("pBlood")
 pBlood.innerHTML = "Blood Group: "+ blood.value;
+pBlood.style.color= "white"
 pBlood.style.paddingLeft = "30px"
 divCon2.appendChild(pBlood)
 
 
 let pAddress = document.getElementById("pAddress")
 pAddress.innerHTML = "Location: " + address.value;
+pAddress.style.color= "white"
 pAddress.style.paddingLeft = "30px"
 divCon2.appendChild(pAddress)
 
 let pThank = document.getElementById("pThank")
-pThank.innerHTML = "Thank You";
-pThank.style.textAlign = "center"
+pThank.innerHTML = "Thank You!";
+pThank.style.paddingRight = "25px"
+pThank.style.textAlign = "end"
 
 divCon2.appendChild(pThank)
 
