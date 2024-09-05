@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Event Listeners</title>
+  </head>
+  <style>
+    body{
+        padding: 0px;
+        border: 0px;
+        box-sizing: border-box;
+    }
+    input{
+        width: 250px;
+        border-radius: 5px;
+        height: 25px;
+    }
+    
+  </style>
+  <body>
+    <!-- <form action="" onsubmit="demo(event)">
+      <input type="text" id="input" />
+      <input type="submit" value="SUBMIT" />
+    </form>
+    <p id="para1"></p> -->
+
+    <h2> ENTER YOUR DETAILS IN ORDER TO GET YOUR ID CARD.</h2>
+    <div style="background-color: antiquewhite; padding: 30px; width: 260px; border-radius: 15px;">
+<form action="">
+    <label for="name">NAME: </label>
+    <input type="text" name="" id="name" /><br><br>
+
+    <label for="age">AGE:</label>
+    <input type="number" name="" id="age" /><br><br>
+
+    <label for="mobile">MOBILE: </label>
+    <input type="tel" name="" id="mobile"/><br><br>
+
+    <label for="email">EMAIL</label>
+    <input type="email" name="" id="email"> <br><br>
+
+    <label for="blood">Blood Grp : </label>
+    <input type="text" name="" id="blood" /><br><br>
+
+    <label for="address">ADDRESS: </label>
+    <input type="text" name="" id="address" /><br><br>
+
+    <input type="submit">
+</form>
+
+</div>
+
+    <h3 id="pName"></h3>
+    <h4 id="pAge"></h4>
+    <h4 id="pNumber"></h4>
+    <h4 id="pEmail"></h4>
+    <h4 id="pBlood"></h4>
+    <h4 id="pAddress"></h4>
+    <h4 id="pThank"></h4>
+
+
+
+
+
+    <script>
+    //   window.addEventListener("scroll", () => {
+    //     document.body.style.backgroundColor = "goldenrod";
+    //   });
+    //   window.addEventListener("scrollend", () => {
+    //     document.body.style.backgroundColor = "white";
+    //   });
+    //   function demo(event) {
+    //     event.preventDefault();
+    //     let p = document.getElementById("para1");
+    //     let input1 = document.getElementById("input");
+    //     p.innerText = input1.value;
+    //     let name = document.getElementById
+    //   }
+// ----------------------------------------------------------------------------------------
+
+let name = document.getElementById("name")
+let age = document.getElementById("age")
+let mobile = document.getElementById("mobile")
+let email = document.getElementById("email")
+let blood = document.getElementById("blood")
+let address = document.getElementById("address")
+
+
+window.addEventListener("submit",(def)=>{
+def.preventDefault()
+let divCon = document.createElement("div");
+divCon.style.height = "500px";
+divCon.style.width = "300px";
+divCon.style.border = "2px solid lightblue";
+divCon.style.borderRadius = "20px 60px";
+divCon.style.backgroundColor = "lightgreen";
+document.body.appendChild(divCon);
+
+
+let divCon1 = document.createElement("img");
+divCon1.setAttribute("src", "pic.png");
+divCon1.style.height = "150px";
+divCon1.style.width = "150px";
+// divCon1.style.Se
+divCon1.style.padding = "30px 23%";
+document.body.appendChild(divCon1);
+divCon.appendChild(divCon1);
+
+
+let pName = document.getElementById("pName")
+pName.innerHTML =name.value;
+pName.style.marginTop = "-20px"
+pName.style.textAlign = "center"
+pName.style.color = "white"
+pName.style.textShadow = "0px 0px 10px black"
+divCon.appendChild(pName)
+
+
+let divCon2 = document.createElement("div")
+divCon2.style.width = "300px"
+divCon2.style.height = "200px"
+divCon2.style.backgroundColor = "#92E2F4"
+divCon.appendChild(divCon2)
+
+
+
+
+let pAge = document.getElementById("pAge")
+pAge.style.paddingTop = "15px"
+pAge.innerHTML = "Age: " + age.value;
+pAge.style.paddingLeft = "30px"
+
+divCon2.appendChild(pAge)
+
+// divCon.innerHTML ="Name: "+ name.value;
+
+
+
+
+let pNumber = document.getElementById("pNumber")
+pNumber.innerHTML = "Mobile: "+ mobile.value;
+pNumber.style.paddingLeft = "30px"
+divCon2.appendChild(pNumber)
+
+
+
+let pEmail = document.getElementById("pEmail")
+pEmail.innerHTML = "Email: "+ email.value;
+pEmail.style.paddingLeft = "30px"
+divCon2.appendChild(pEmail)
+
+
+
+let pBlood = document.getElementById("pBlood")
+pBlood.innerHTML = "Blood Group: "+ blood.value;
+pBlood.style.paddingLeft = "30px"
+divCon2.appendChild(pBlood)
+
+
+let pAddress = document.getElementById("pAddress")
+pAddress.innerHTML = "Location: " + address.value;
+pAddress.style.paddingLeft = "30px"
+divCon2.appendChild(pAddress)
+
+let pThank = document.getElementById("pThank")
+pThank.innerHTML = "Thank You";
+pThank.style.textAlign = "center"
+
+divCon2.appendChild(pThank)
+
+})
+
+
+
+    </script>
+  </body>
+</html>
